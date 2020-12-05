@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const SettingBar = () => {
-  return (
-    <div className="toolbar">
-      
-    </div>
-  )
-}
+  return <div className="toolbar toolbar--setting"></div>;
+};
 
-export default SettingBar
+export default SettingBar;
