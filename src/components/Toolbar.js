@@ -5,6 +5,7 @@ import canvasState from "../store/canvasState";
 import Brush from "../tools/Brush";
 import Rectangle from "../tools/Rectangle";
 import Circle from "../tools/Circle";
+import Line from "../tools/Line";
 
 const Toolbar = () => {
   return (
@@ -21,8 +22,11 @@ const Toolbar = () => {
         className="toolbar__btn circle"
         onClick={() => toolState.setTool(new Circle(canvasState.canvas))}
       />
+      <button
+        className="toolbar__btn line"
+        onClick={() => toolState.setTool(new Line(canvasState.canvas))}
+      />
       <button className="toolbar__btn eraser" />
-      <button className="toolbar__btn line" />
       <input type="color" style={{ marginLeft: 10 }} />
       <button className="toolbar__btn undo" />
       <button className="toolbar__btn next" />
