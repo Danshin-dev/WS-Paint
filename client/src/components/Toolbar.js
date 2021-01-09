@@ -18,11 +18,27 @@ const Toolbar = () => {
     <div className="toolbar">
       <button
         className="toolbar__btn brush"
-        onClick={() => toolState.setTool(new Brush(canvasState.canvas))}
+        onClick={() =>
+          toolState.setTool(
+            new Brush(
+              canvasState.canvas,
+              canvasState.socket,
+              canvasState.sessionId
+            )
+          )
+        }
       />
       <button
         className="toolbar__btn square"
-        onClick={() => toolState.setTool(new Rectangle(canvasState.canvas))}
+        onClick={() =>
+          toolState.setTool(
+            new Rectangle(
+              canvasState.canvas,
+              canvasState.socket,
+              canvasState.sessionId
+            )
+          )
+        }
       />
       <button
         className="toolbar__btn circle"
