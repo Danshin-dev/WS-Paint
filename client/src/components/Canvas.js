@@ -63,7 +63,8 @@ const Canvas = observer(() => {
           figure.x,
           figure.y,
           figure.width,
-          figure.height
+          figure.height,
+          figure.color
         );
         break;
       case "finish":
