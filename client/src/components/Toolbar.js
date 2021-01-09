@@ -8,6 +8,11 @@ import Circle from "../tools/Circle";
 import Line from "../tools/Line";
 
 const Toolbar = () => {
+  const changeColor = (e) => {
+    toolState.setStrokeColor(e.target.value);
+    toolState.setFillColor(e.target.value);
+  };
+
   return (
     <div className="toolbar">
       <button
@@ -27,7 +32,11 @@ const Toolbar = () => {
         onClick={() => toolState.setTool(new Line(canvasState.canvas))}
       />
       <button className="toolbar__btn eraser" />
-      <input type="color" style={{ marginLeft: 10 }} />
+      <input
+        type="color"
+        style={{ marginLeft: 10 }}
+        onChange={(e) => changeColor(e)}
+      />
       <button className="toolbar__btn undo" />
       <button className="toolbar__btn next" />
       <button className="toolbar__btn save" />
