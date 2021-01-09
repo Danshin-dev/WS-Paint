@@ -6,6 +6,7 @@ import Brush from "../tools/Brush";
 import Rectangle from "../tools/Rectangle";
 import Circle from "../tools/Circle";
 import Line from "../tools/Line";
+import Eraser from "../tools/Eraser";
 
 const Toolbar = () => {
   const changeColor = (e) => {
@@ -31,7 +32,10 @@ const Toolbar = () => {
         className="toolbar__btn line"
         onClick={() => toolState.setTool(new Line(canvasState.canvas))}
       />
-      <button className="toolbar__btn eraser" />
+      <button
+        className="toolbar__btn eraser"
+        onClick={() => toolState.setTool(new Eraser(canvasState.canvas))}
+      />
       <input
         type="color"
         style={{ marginLeft: 10 }}
